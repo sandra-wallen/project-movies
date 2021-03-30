@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 
 import { URL_POSTER } from '../reusables/Urls'
 
-const MovieCard = ({ poster_path, name, id }) => {
+const MovieCard = ({ poster_path, name, id, title, release_date }) => {
   return (
-    <Link to={`/movies/:${id}`}>
-      <section>
-        <img src={URL_POSTER(poster_path)} alt={name} /> 
-      </section>
+    <Link className="movie-wrapper" to={`/movies/${id}`}>
+      <img className="movie-poster" src={URL_POSTER(poster_path)} alt={name} /> 
+      <div className="movie-details">
+        <h2 className="movie-title">{title}</h2>
+        <p className="movie-release-date">Released {release_date}</p>
+      </div>
     </Link>
   )
 }

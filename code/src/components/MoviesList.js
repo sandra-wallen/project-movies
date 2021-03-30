@@ -14,7 +14,7 @@ const MoviesList = () => {
 
   return (
     <>
-      <section>
+      <section className="movies-section">
         {movies.map(movie => <MovieCard {...movie} />)}
       </section>
 

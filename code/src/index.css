@@ -11,3 +11,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main {
+  width: 100%;
+}
+
+.movies-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-wrapper {
+  display: flex;
+  width: 25%;
+  position: relative;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-details {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  padding: 20px;
+}
+
+.movie-title {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 32px;
+}
+
+.movie-release-date {
+  margin: 16px 0px;
+}
+
+.movie-details:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.backdrop-img {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
