@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+
 import { API_URL_DETAILS, URL_BACKDROP, URL_POSTER } from 'reusables/Urls'
+import BackLink from '../components/BackLink'
 
 const MovieDetails = () => {
   
@@ -20,18 +22,20 @@ const MovieDetails = () => {
   return (
     <>
       <section className="movie-details-section">
+        <BackLink />
         <div className="backdrop-img" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${URL_BACKDROP(movieSpecs.backdrop_path)})`}}>
-          <button>BACK</button>
           <div className="summary-wrapper">
             <img className="summary-poster" src={URL_POSTER(movieSpecs.poster_path)} alt="Movie poster"/>
-            <h2 className="summary-title">
-              {movieSpecs.title}
-              <span className="summary-rating">
-                {movieSpecs.vote_average}
-                /10
-              </span>
-            </h2>
-            <p className="summary-overview">{movieSpecs.overview}</p>
+            <div className="summary-text-wrapper">
+              <h2 className="summary-title">
+                {movieSpecs.title}
+                <span className="summary-rating">
+                  {movieSpecs.vote_average}
+                  /10
+                </span>
+              </h2>
+              <p className="summary-overview">{movieSpecs.overview}</p>
+            </div>
           </div>
         </div>
         

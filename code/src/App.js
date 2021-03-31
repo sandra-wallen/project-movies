@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import LandingPage from './pages/LandingPage'
-import MoviesList from './components/MoviesList'
+import MoviesList from './pages/MoviesList'
 import MovieDetails from './pages/MovieDetails'
 
 export const App = () => {

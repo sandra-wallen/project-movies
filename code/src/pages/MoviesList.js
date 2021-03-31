@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { API_URL_MOVIES } from '../reusables/Urls'
-import MovieCard from './MovieCard'
+import MovieCard from '../components/MovieCard'
 
 const MoviesList = () => {
   const [movies, setMovies] = useState([])
