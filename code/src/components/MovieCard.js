@@ -5,7 +5,7 @@ import { URL_POSTER } from '../reusables/Urls'
 
 const MovieCard = ({ poster_path, name, id, title, release_date }) => {
   return (
-    <Link className="movie-wrapper" to={`/movies/${id}`}>
+    <Link className="movie-wrapper" key={id} to={`/movies/${id}`}>
       <img className="movie-poster" src={URL_POSTER(poster_path)} alt={name} /> 
       <div className="movie-details">
         <h2 className="movie-title">{title}</h2>

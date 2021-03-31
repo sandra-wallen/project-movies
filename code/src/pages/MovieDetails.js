@@ -13,7 +13,7 @@ const MovieDetails = () => {
     fetch(API_URL_DETAILS(id))
       .then(response => response.json())
       .then(json => setMovieSpecs(json))
-  }, [])
+  }, [id])
 
   console.log(URL_BACKDROP(movieSpecs.backdrop_path))
 
@@ -23,7 +23,7 @@ const MovieDetails = () => {
         <div className="backdrop-img" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${URL_BACKDROP(movieSpecs.backdrop_path)})`}}>
           <button>BACK</button>
           <div className="summary-wrapper">
-            <img className="summary-poster" src={URL_POSTER(movieSpecs.poster_path)} />
+            <img className="summary-poster" src={URL_POSTER(movieSpecs.poster_path)} alt="Movie poster"/>
             <h2 className="summary-title">
               {movieSpecs.title}
               <span className="summary-rating">
