@@ -16,6 +16,14 @@ code {
   width: 100%;
 }
 
+
+/*Landing page*/
+.landing-page-section {
+  background: red;
+}
+
+
+/*Movies*/
 .movies-section {
   width: 100%;
   display: flex;

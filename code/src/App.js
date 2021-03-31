@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+import LandingPage from './pages/LandingPage'
 import MoviesList from './components/MoviesList'
 import MovieDetails from './pages/MovieDetails'
 
@@ -9,9 +10,9 @@ export const App = () => {
     <BrowserRouter>
       <main className="main">
         <Switch>
-          {/* <Route path="/" exact>
+          <Route path="/" exact>
           <LandingPage />
-          </Route> */}
+          </Route>
           <Route path="/movies/popular" exact>
             <MoviesList />
           HEJ

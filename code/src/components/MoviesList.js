@@ -15,7 +15,7 @@ const MoviesList = () => {
   return (
     <>
       <section className="movies-section">
-        {movies.map(movie => <MovieCard {...movie} />)}
+        {movies.map(movie => <MovieCard key={movie.id} {...movie} />)}
       </section>
 
     </>
