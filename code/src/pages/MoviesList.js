@@ -8,8 +8,9 @@ const MoviesList = () => {
   
   useEffect(() => {
     fetch(API_URL_MOVIES)
-      .then (response => response.json())
-      .then (json => setMovies(json.results))
+      .then(response => response.json())
+      .then(json => setMovies(json.results))
+      .catch(err => console.error(err))
   }, [])
 
   return (

@@ -10,8 +10,7 @@ const LandingPage = () => {
 
   return (
     <section className="landing-page-section">
-    <p>WELCOME</p>
-    <button onClick={handleClick}>MOVIES</button>
+    
     </section>
   )
 }
