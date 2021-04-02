@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 import { API_URL_DETAILS, URL_BACKDROP, URL_POSTER } from 'reusables/Urls'
 import BackLink from '../components/BackLink'
 
-const MovieDetails = () => {
-  const {id} = useParams()
-
+const MovieDetails = ({ id }) => {
   const [movieSpecs, setMovieSpecs] = useState([])
 
   useEffect(() => {

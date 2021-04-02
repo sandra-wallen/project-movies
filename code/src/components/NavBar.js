@@ -5,11 +5,12 @@ import BackLink from './BackLink'
 
 const NavBar = () => {
   return (
-    <nav>
+      <nav>
       {/* <BackLink /> */}
         <Link className="nav-bar-link" to={`/movies/popular`}>Popular</Link>
         <Link className="nav-bar-link" to={`/movies/upcoming`}>Upcoming</Link> 
     </nav>
+  
   )
 }
 

@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 import { API_URL_MOVIES } from '../reusables/Urls'
 import MovieCard from '../components/MovieCard'
 
-const MoviesList = ({ movies, setMovies }) => {
-  
-
-  const {list} = useParams()
+const MoviesList = ({ list, movies, setMovies }) => {
   
   useEffect(() => {
     fetch(API_URL_MOVIES(list))
